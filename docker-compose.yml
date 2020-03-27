@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  node:
+    build: ./services/node
+    volumes:
+      - ./src:/usr/local/eleventy
+    working_dir: /usr/local/eleventy
+    ports:
+      - "${HTTP_PORT}:8080"
